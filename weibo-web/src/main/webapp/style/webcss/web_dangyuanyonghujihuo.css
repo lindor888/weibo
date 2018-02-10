@@ -1,0 +1,40 @@
+/*党员用户激活*/
+.dyyhjh { width:752px; margin:16px auto 0px;}
+.dyyhjh .top{ height:48px;}
+.dyyhjh .top h1 span{ font-size:32px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:14px;}
+.dyyhjh .top h1 em{font-size:16px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:24px; padding-top:18px;}
+.dyyhjh .content{ width:748px; height:491px; border:2px solid #fd6d6d; background:#f9f9f9;}
+.dyyhjh .liucheng{ background:url(img/dangyuanyonghujihuo.jpg) no-repeat top left; width:661px; height:61px; margin:23px auto 0px; border-bottom:1px solid #fd3e3e;}
+.dyyhjh .xinxi{width:661px; margin:0 auto;}
+.dyyhjh .xinxi h1{ font-size:14px; font-weight:normal; padding-top:8px;}
+.dyyhjh .xinxi dl.dl1{ padding-left:159px; width:430px; height:172px; border-bottom:1px solid #fd3e3e;}
+.dyyhjh .xinxi dl.dl1 dd{ float:left;width:430px; padding-top:12px;}
+.dyyhjh .xinxi dl.dl1 dd span{ width:90px; height:25px; padding-top:10px; text-align:right; display:inline-block; float:left;}
+.dyyhjh .xinxi dl.dl1 dd input{ float:left;}
+.dyyhjh .xinxi dl.dl1 dd input.text{ width:231px; padding-left:7px; background:#fff; height:33px; line-height:33px; border:1px solid #c9c9c9;}
+.dyyhjh .xinxi dl.dl1 dd a{ float:left; color:#002366; text-decoration:underline;}
+
+.dyyhjh .xinxi dl.dl2 dt{ font-size:14px; font-weight:normal; padding-top:5px;}
+.dyyhjh .xinxi dl.dl2 dd{padding-left:159px; height:48px; padding-top:20px;}
+.dyyhjh .xinxi dl.dl2 dd span{ width:90px; height:25px;text-align:right; padding-top:18px; display:inline-block; float:left;}
+.dyyhjh .xinxi dl.dl2 dd input.text1{ width:91px;background:#fff; margin-top:5px; height:33px; line-height:33px; border:1px solid #c9c9c9; float:left;}
+.dyyhjh .xinxi dl.dl2 dd img{ float:left; width:101px; height:48px; cursor:pointer; padding-left:12px;}
+.dyyhjh .xinxi dl.dl2 dd a{ float:left; padding-left:13px; padding-top:27px; color:#002366;width:50px; text-decoration:underline;}
+.dyyhjh .xinxi dl.dl2 .submit{ background:url(img/login.jpg) no-repeat 0 0; width:85px; height:27px; font-family:"微软雅黑"; color:#fff; font-size:14px; border:none; cursor:pointer; margin-left:83px;}
+
+
+
+.dyyhjh .bottom{ height:20px; background:url(img/dibiao.jpg) no-repeat 0 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+

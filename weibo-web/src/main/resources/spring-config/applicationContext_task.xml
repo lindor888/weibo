@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	<!-- mongodb -->
+	<bean id="weiboDao" class="com.ctvit.weibo.mongodb.dao.WeiboDao"></bean>
+	<bean id="commentDao" class="com.ctvit.weibo.mongodb.dao.CommentDao"></bean>
+	<bean id="repostDao" class="com.ctvit.weibo.mongodb.dao.RepostDao"></bean>
+	<bean id="userDao" class="com.ctvit.weibo.mongodb.dao.UserDao"></bean>
+	<bean id="searchWeiboDao" class="com.ctvit.weibo.mongodb.dao.SearchWeiboDao"></bean>
+	
+	<bean id="sinaWeiboUtil" class="com.ctvit.weibo.util.SinaWeiboUtil"></bean>
+	
+	<bean id="quartzManager" class="com.ctvit.weibo.task.service.QuartzManager">
+		<property name="sentDao" ref="sentWeiboMapper"></property>
+		<property name="sinaWeiboUtil" ref="sinaWeiboUtil"></property>
+		<property name="taskService" ref="taskService"></property>
+		<property name="weiboService" ref="weiboService"></property>
+		<property name="quartzManager" ref="quartzManager"></property>
+		<property name="weiboDao" ref="weiboDao"></property>
+		<property name="commentDao" ref="commentDao"></property>
+		<property name="repostDao" ref="repostDao"></property>
+		<property name="userDao" ref="userDao"></property>
+		<property name="searchWeiboDao" ref="searchWeiboDao"></property>
+		<property name="countSearchWeiboService" ref="countSearchWeiboService"></property>
+		<property name="countFollowerSexService" ref="countFollowerSexService"></property>
+		<property name="countFollowerDistrictService" ref="countFollowerDistrictService"></property>
+		<property name="countWeiboService" ref="countWeiboService"></property>
+	</bean>
+	
+	<bean id="taskMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.task.dao.TaskMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="taskService" class="com.ctvit.weibo.task.service.TaskService">
+		<property name="taskMapper" ref="taskMapper"></property>
+		<property name="quartzManager" ref="quartzManager"></property>
+	</bean>
+	<bean id="ruleUtil" class="com.ctvit.weibo.util.QuartzRuleUtil"></bean>
+	
+	<!-- 我的微博内容采集任务 -->
+	<bean id="contentTaskAction" class="com.ctvit.weibo.task.action.ContentTaskAction" scope="prototype"></bean>
+	
+	<bean id="taskAction" class="com.ctvit.weibo.task.action.TaskAction" scope="prototype">
+		<property name="taskService" ref="taskService"/>
+		<property name="ruleUtil" ref="ruleUtil"/>
+		<property name="weiboDao" ref="weiboDao"></property>
+		<property name="commentDao" ref="commentDao"></property>
+		<property name="repostDao" ref="repostDao"></property>
+		<property name="userDao" ref="userDao"></property>
+		<property name="searchWeiboDao" ref="searchWeiboDao"></property>
+		<property name="countSearchWeiboService" ref="countSearchWeiboService"></property>
+		<property name="countFollowerSexService" ref="countFollowerSexService"></property>
+		<property name="countFollowerDistrictService" ref="countFollowerDistrictService"></property>
+		<property name="countWeiboService" ref="countWeiboService"></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ctvit.weibo.dao.WeiboMapper">
+  <resultMap id="BaseResultMap" type="com.ctvit.weibo.entity.Weibo">
+    <result column="weibo_id" jdbcType="VARCHAR" property="weiboId" />
+    <result column="weibo_user_name" jdbcType="VARCHAR" property="weiboUserName" />
+    <result column="weibo_password" jdbcType="VARCHAR" property="weiboPassword" />
+    <result column="weibo_uid" jdbcType="VARCHAR" property="weiboUid" />
+    <result column="app_id" jdbcType="VARCHAR" property="appId" />
+    <result column="weibo_create_time" jdbcType="TIMESTAMP" property="weiboCreateTime" />
+    <result column="delete_flag" jdbcType="INTEGER" property="deleteFlag" />
+    <result column="weibo_token" jdbcType="VARCHAR" property="weiboToken" />
+    <result column="app_key" jdbcType="VARCHAR" property="appKey" />
+    <result column="app_secret" jdbcType="VARCHAR" property="appSecret" />
+    <result column="app_redirect_uri" jdbcType="VARCHAR" property="appRedirectUri" />
+    
+    <!-- 其它表字段 -->
+    <result column="app_name" jdbcType="VARCHAR" property="appName" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    w.weibo_id, w.weibo_user_name, w.weibo_password, w.weibo_uid, w.app_id, w.weibo_create_time, 
+    w.delete_flag, w.weibo_token, a.app_name, a.app_key, a.app_secret, a.app_redirect_uri
+  </sql>
+  <select id="selectByExample" parameterType="com.ctvit.weibo.entity.WeiboExample" resultMap="BaseResultMap">
+  	select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from weibo w,app a
+    where w.app_id = a.app_id
+    <if test="userId != null">
+    	and a.user_id = #{userId,jdbcType=VARCHAR}
+    </if>
+    <if test="appId != null">
+    	and a.app_id = #{appId,jdbcType=VARCHAR}
+    </if>
+    <if test="deleteFlag != null">
+    	and w.delete_flag = #{deleteFlag,jdbcType=VARCHAR}
+    </if>
+    order by weibo_create_time desc
+    <if test="beginIndex != null" >
+  		limit #{beginIndex,jdbcType=DECIMAL},#{rows,jdbcType=DECIMAL}
+  	</if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.ctvit.weibo.entity.WeiboExample">
+    delete from weibo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ctvit.weibo.entity.Weibo">
+    insert into weibo (weibo_id, weibo_user_name, weibo_password, 
+      weibo_uid, app_id, weibo_create_time, 
+      delete_flag, weibo_token)
+    values (#{weiboId,jdbcType=VARCHAR}, #{weiboUserName,jdbcType=VARCHAR}, #{weiboPassword,jdbcType=VARCHAR}, 
+      #{weiboUid,jdbcType=VARCHAR}, #{appId,jdbcType=VARCHAR}, sysdate(), 
+      #{deleteFlag,jdbcType=INTEGER}, #{weiboToken,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ctvit.weibo.entity.Weibo">
+    insert into weibo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="weiboId != null">
+        weibo_id,
+      </if>
+      <if test="weiboUserName != null">
+        weibo_user_name,
+      </if>
+      <if test="weiboPassword != null">
+        weibo_password,
+      </if>
+      <if test="weiboUid != null">
+        weibo_uid,
+      </if>
+      <if test="appId != null">
+        app_id,
+      </if>
+      <if test="weiboCreateTime != null">
+        weibo_create_time,
+      </if>
+      <if test="deleteFlag != null">
+        delete_flag,
+      </if>
+      <if test="weiboToken != null">
+        weibo_token,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="weiboId != null">
+        #{weiboId,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboUserName != null">
+        #{weiboUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboPassword != null">
+        #{weiboPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboUid != null">
+        #{weiboUid,jdbcType=VARCHAR},
+      </if>
+      <if test="appId != null">
+        #{appId,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboCreateTime != null">
+        #{weiboCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteFlag != null">
+        #{deleteFlag,jdbcType=INTEGER},
+      </if>
+      <if test="weiboToken != null">
+        #{weiboToken,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ctvit.weibo.entity.WeiboExample" resultType="java.lang.Integer">
+    select count(*) from weibo w,app a
+    where w.app_id = a.app_id
+    <if test="userId != null">
+    	and a.user_id = #{userId,jdbcType=VARCHAR}
+    </if>
+    <if test="appId != null">
+    	and a.app_id = #{appId,jdbcType=VARCHAR}
+    </if>
+    <if test="deleteFlag != null">
+    	and w.delete_flag = #{deleteFlag,jdbcType=VARCHAR}
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update weibo
+    <set>
+      <if test="record.weiboId != null">
+        weibo_id = #{record.weiboId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weiboUserName != null">
+        weibo_user_name = #{record.weiboUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weiboPassword != null">
+        weibo_password = #{record.weiboPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weiboUid != null">
+        weibo_uid = #{record.weiboUid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.appId != null">
+        app_id = #{record.appId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weiboCreateTime != null">
+        weibo_create_time = #{record.weiboCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deleteFlag != null">
+        delete_flag = #{record.deleteFlag,jdbcType=INTEGER},
+      </if>
+      <if test="record.weiboToken != null">
+        weibo_token = #{record.weiboToken,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update weibo
+    set weibo_id = #{record.weiboId,jdbcType=VARCHAR},
+      weibo_user_name = #{record.weiboUserName,jdbcType=VARCHAR},
+      weibo_password = #{record.weiboPassword,jdbcType=VARCHAR},
+      weibo_uid = #{record.weiboUid,jdbcType=VARCHAR},
+      app_id = #{record.appId,jdbcType=VARCHAR},
+      weibo_create_time = #{record.weiboCreateTime,jdbcType=TIMESTAMP},
+      delete_flag = #{record.deleteFlag,jdbcType=INTEGER},
+      weibo_token = #{record.weiboToken,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateTokenByWeiboId" parameterType="com.ctvit.weibo.entity.Weibo">
+  	update weibo set weibo_token = #{weiboToken,jdbcType=VARCHAR} 
+  	where weibo_id = #{weiboId,jdbcType=VARCHAR} 
+  </update>
+  
+  <select id="searchByWeiboUserName" parameterType="com.ctvit.weibo.entity.Weibo" resultMap="BaseResultMap">
+  	SELECT WEIBO_ID FROM WEIBO WHERE WEIBO_USER_NAME = #{weiboUserName,jdbcType=VARCHAR}
+  	and delete_flag = #{deleteFlag,jdbcType=INTEGER}
+  </select>
+  <select id="searchWeiboAppById" parameterType="com.ctvit.weibo.entity.Weibo" resultMap="BaseResultMap">
+  	SELECT 
+  		w.weibo_user_name, w.weibo_password, w.weibo_uid,a.app_key, a.app_secret, a.app_redirect_uri
+  	FROM WEIBO w,APP a WHERE 1=1 
+  	<if test="weiboId != null">
+  		and w.WEIBO_ID = #{weiboId,jdbcType=VARCHAR}
+  	</if>
+  	<if test="weiboUid != null">
+  		and w.weibo_uid = #{weiboUid,jdbcType=VARCHAR}
+  	</if>
+  	<if test="deleteFlag != null">
+  		and w.delete_flag = #{deleteFlag,jdbcType=INTEGER}
+  	</if>
+   	and w.app_id = a.app_id
+  </select>
+  <select id="searchById" parameterType="String" resultMap="BaseResultMap">
+  	SELECT * FROM WEIBO WHERE WEIBO_ID = #{weiboId,jdbcType=VARCHAR}
+  </select>
+  <update id="update" parameterType="com.ctvit.weibo.entity.Weibo">
+    update weibo
+    <set>
+      <if test="weiboUserName != null">
+        weibo_user_name = #{weiboUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboPassword != null">
+        weibo_password = #{weiboPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboUid != null">
+        weibo_uid = #{weiboUid,jdbcType=VARCHAR},
+      </if>
+      <if test="appId != null">
+        app_id = #{appId,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboCreateTime != null">
+        weibo_create_time = #{weiboCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteFlag != null">
+        delete_flag = #{deleteFlag,jdbcType=INTEGER},
+      </if>
+      <if test="weiboToken != null">
+        weibo_token = #{weiboToken,jdbcType=VARCHAR},
+      </if>
+    </set>
+    	where weibo_id = #{weiboId,jdbcType=VARCHAR}
+  </update>
+  
+  <!-- 查询某个用户下所有的微博信息 -->
+  <select id="selectByUserId" parameterType="com.ctvit.weibo.entity.Weibo" resultMap="BaseResultMap">
+  	select
+    <include refid="Base_Column_List" />
+    from weibo w,app a
+    where w.app_id = a.app_id
+    <if test="userId != null">
+    	and a.user_id = #{userId,jdbcType=VARCHAR}
+    </if>
+    <if test="deleteFlag != null">
+    	and w.delete_flag = #{deleteFlag,jdbcType=VARCHAR}
+    </if>
+    order by weibo_create_time desc
+  </select>
+</mapper>

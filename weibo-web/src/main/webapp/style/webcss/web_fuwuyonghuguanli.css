@@ -1,0 +1,10 @@
+#tjfwyh{ background:#f9f9f9;}
+.tjfwyh{ width:430px; margin:0 auto;}
+.tjfwyh dl dd{ margin-top:25px;}
+.tjfwyh dl dd span{ width:90px; padding-right:15px; display:inline-block;} 
+.tjfwyh dl dd span b{ color:#ff0000; float:right; font-weight:normal;}
+.tjfwyh dl dd span em{ float:right;}
+.tjfwyh dl dd input.text{ width:180px; height:20px; background:#fff; border:1px solid #e4e4e4;}
+.tjfwyh dl dd input.button1{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:10px;}
+.tjfwyh dl dd input.button2{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:20px;}
+.tjfwyh dl dd input.submit{ width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:110px;}

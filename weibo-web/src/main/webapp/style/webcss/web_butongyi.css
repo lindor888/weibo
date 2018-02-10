@@ -1,0 +1,25 @@
+/*不同意*/
+.butongyi { width:752px; margin:16px auto 0px;}
+.butongyi .top{ height:48px;}
+.butongyi .top h1 span{ font-size:32px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:14px;}
+.butongyi .top h1 em{font-size:16px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:24px; padding-top:18px;}
+.butongyi .content{ width:748px; height:421px; border:2px solid #fd6d6d; background:#f9f9f9;}
+.butongyi .content .liucheng{ width:661px; height:61px; margin:23px auto 0px; border-bottom:1px solid #fd3e3e;}
+.butongyi .content .xinxi{width:661px; margin:0 auto;}
+.butongyi .content .xinxi dl{ text-align:center;}
+.butongyi .content .xinxi dl dd{ padding-top:37px;}
+.butongyi .content .xinxi dl dd a{ color:#002366; text-decoration:underline;}
+.butongyi .bottom{ height:20px; background:url(img/dibiao.jpg) no-repeat 0 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+

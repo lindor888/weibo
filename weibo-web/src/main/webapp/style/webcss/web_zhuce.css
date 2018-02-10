@@ -1,0 +1,24 @@
+/*注册*/
+.zhuce { width:772px; height:482px; background:url(img/reglogin.jpg) no-repeat  0 0; margin:0 auto;}
+.zhuce .top{ height:48px;}
+.zhuce .top h1 span{ font-size:32px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:14px;}
+.zhuce .top h1 em{font-size:16px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:24px; padding-top:18px;}
+.zhuce .content{ width:690px; height:320px; margin:0 auto; border:1px solid #adadad; overflow-x:hidden; overflow:scroll; background:#fff;}
+.zhuce .content h1{ font-size:14px; font-weight:normal; text-align:center; padding-top:23px; height:43px; } 
+.zhuce .content p{ width:635px; margin:0 auto; line-height:18px;}
+.zhuce .bottom p{ text-align:center; padding-top:32px;}
+.zhuce .bottom input{ width:85px; height:27px; background:url(img/login.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑";  border:none; color:#fff; cursor:pointer;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

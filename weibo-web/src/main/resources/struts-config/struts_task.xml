@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="task" namespace="/task" extends="weibo" >
+		<!-- 基础任务设置 -->
+		<action name="*Task"  class="taskAction"  method="{1}">
+			<result name="indexPre">/task/taskIndex.jsp</result>
+			<result name="indexSuperPre">/task/taskSuperIndex.jsp</result>
+			<result name="startPre">/task/taskStart.jsp</result>
+			<result name="addPre">/task/taskAdd.jsp</result>
+			<result name="updatePre">/task/taskUpdate.jsp</result>
+			<result name="dataList" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="look" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+		</action>
+		
+		
+		<!-- 搞基任务设置 -->
+		<action name="*SuperTask"  class="superTaskAction"  method="{1}">
+			<result name="add">/mc/user/permissionAdd.jsp</result>
+			<result name="dataList" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+		</action>
+		
+	</package>
+</struts>

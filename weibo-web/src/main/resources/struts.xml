@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.objectFactory.spring.autoWire" value="auto" />
+	<constant name="struts.multipart.saveDir" value="/tmp" />
+	<constant name="struts.multipart.maxSize" value="5242880" />
+
+
+	<!-- 任务相关 -->
+	<include file="struts-config/struts_task.xml"></include>
+	<include file="struts-config/struts_user.xml"></include>
+	<include file="struts-config/struts_weibo.xml"></include>
+	<include file="struts-config/struts_app.xml"></include>
+	<include file="struts-config/struts_show.xml"></include>
+	<include file="struts-config/struts_words.xml"></include>
+	
+
+	<!-- 根包 -->
+	<package name="weibo" namespace="/" extends="json-default">
+		<interceptors>
+			<!--<interceptor name="sessionInterceptor" class="com.ctvit.weibo.filter.SessionIntercept"></interceptor>
+			<interceptor name="permissionFilter" class="permissionFilter"></interceptor> -->
+			<interceptor name="sessionInterceptor" class="com.ctvit.weibo.filter.SessionIntercept"></interceptor>
+			<interceptor-stack name="mcStack">
+				<interceptor-ref name="sessionInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+			<!-- <interceptor-stack name="mcStack_login" > <interceptor-ref name="McInterceptor"></interceptor-ref> 
+				<interceptor-ref name="defaultStack"></interceptor-ref> </interceptor-stack> 
+				<interceptor-stack name="mcStack_session" > <interceptor-ref name="sessionInterceptor"></interceptor-ref> 
+				<interceptor-ref name="McInterceptor"></interceptor-ref> <interceptor-ref 
+				name="defaultStack"></interceptor-ref> </interceptor-stack> -->
+		</interceptors>
+		<default-interceptor-ref name="mcStack"></default-interceptor-ref>
+		<global-results>
+			<result name="login">/login.jsp</result>
+			<result name="noper">/style/error/forbidden.jsp</result>
+			<result name="error">/style/error/error.jsp</result>
+		</global-results>
+
+		<!-- strut2的500错处理 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+			<exception-mapping result="error" exception="java.sql.SQLException"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+	<!-- strut2的404错处理 -->
+	<package name="default" extends="struts-default">
+		<default-action-ref name="notFound" />
+		<action name="notFound">
+			<result>/style/error/404.jsp</result>
+		</action>
+	</package>
+</struts>
+

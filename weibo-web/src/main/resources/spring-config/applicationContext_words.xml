@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+		
+    <bean id="wordsMapper" class="org.mybatis.spring.MapperFactoryBean">
+   		<property name="mapperInterface" value="com.ctvit.weibo.dao.WordsMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+    
+	<bean id="wordsService" class="com.ctvit.weibo.service.WordsService">
+		<property name="wordsMapper" ref="wordsMapper" />
+	</bean>
+	
+	<bean name="wordsAction" class="com.ctvit.weibo.action.WordsAction" scope="prototype">
+		<property name="wordsService" ref="wordsService"></property>
+	</bean>
+</beans>

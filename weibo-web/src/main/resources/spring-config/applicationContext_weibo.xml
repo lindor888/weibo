@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	<bean id="weiboMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.dao.WeiboMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="friendWeiboMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.dao.FriendWeiboMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="weiboService" class="com.ctvit.weibo.service.WeiboService">
+		<property name="weiboMapper" ref="weiboMapper"></property>
+		<property name="taskService" ref="taskService"></property>
+		<property name="sentDao" ref="sentWeiboMapper"></property>
+		<property name="quartzManager" ref="quartzManager"></property>
+	</bean>
+	<bean id="friendWeiboService" class="com.ctvit.weibo.service.FriendWeiboService">
+		<property name="dao" ref="friendWeiboMapper"></property>
+		<property name="appMapper" ref="appMapper"></property>
+	</bean>
+	<!-- 我的微博 -->
+	<bean id="weiboAction" class="com.ctvit.weibo.action.WeiboAction" scope="prototype">
+		<property name="appService" ref="appService"></property>
+		<property name="weiboService" ref="weiboService"></property>
+		<property name="sinaWeiboUtil" ref="sinaWeiboUtil"></property>
+		<property name="wordsService" ref="wordsService"></property>
+	</bean>
+	<!-- 我的关注微博 -->
+	<bean id="friendWeiboAction" class="com.ctvit.weibo.action.FriendWeiboAction" scope="prototype">
+		<property name="friendWeiboService" ref="friendWeiboService"></property>
+		<property name="weiboService" ref="weiboService"></property>
+	</bean>
+	
+	
+	<bean id="sentWeiboMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.dao.SentWeiboMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="sentService" class="com.ctvit.weibo.service.SentWeiboService">
+		<property name="dao" ref="sentWeiboMapper"></property>
+		<property name="quartzManager" ref="quartzManager"></property>
+	</bean>
+	<bean id="sendAction" class="com.ctvit.weibo.action.SendAction" scope="prototype">
+		<property name="weiboService" ref="weiboService"></property>
+		<property name="sentService" ref="sentService"></property>
+	</bean>
+	<bean id="fileUploadAction" class="com.ctvit.weibo.action.FileUploadAction" scope="prototype">
+	</bean>
+	
+</beans>

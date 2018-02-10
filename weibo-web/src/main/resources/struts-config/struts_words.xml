@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="words" namespace="/words" extends="weibo">
+	<action name="*Words" class="wordsAction" method="{1}">
+		<result name="init">/words/wordsIndex.jsp</result>
+		<result name="toAdd">/words/wordsAdd.jsp</result>
+		<result name="toUpdate">/words/wordsUpdate.jsp</result>
+		<result name="select" type="json"><param name="root">queryJson</param></result>
+		<result name="add" type="json"><param name="root">queryJson</param></result>
+		<result name="update" type="json"><param name="root">queryJson</param></result>
+		<result name="del" type="json"><param name="root">queryJson</param></result>
+	</action>
+</package>
+</struts>

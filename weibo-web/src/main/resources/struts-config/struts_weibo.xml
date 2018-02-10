@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="myweibo" namespace="/" extends="weibo" >
+		<!-- 基础任务设置 -->
+		<action name="*Weibo"  class="weiboAction"  method="{1}">
+			<result name="indexPre">/weibo/weiboIndex.jsp</result>
+			<result name="taskIndex">/weibo/taskIndex.jsp</result>
+			<result name="addPre">/weibo/weiboAdd.jsp</result>
+			<result name="addPreApp">/weibo/weiboAddApp.jsp</result>
+			<result name="updatePre">/weibo/weiboUpdate.jsp</result>
+			<result name="getFriendsPre">/weibo/weiboFriendsIndex.jsp</result>
+			<result name="contentIndexPre">/weibo/weiboContentIndex.jsp</result>
+			<result name="dataList" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="shenhew" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="shenhec" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="addOrUpdateBtvComment" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="selectBtvUser" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="selectBtvUserByKey" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+    		<result name="selectCommentByKey" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+		</action>
+		
+		<action name="*Friend"  class="friendWeiboAction"  method="{1}">
+			<result name="indexPre">/weibo/weiboFriendsIndex.jsp</result>
+			<result name="addPre">/weibo/weiboFriendAdd.jsp</result>
+			<result name="dataList" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+		</action>
+		
+		<action name="*Send"  class="sendAction"  method="{1}">
+			<result name="sendPre">/weibo/weiboSendIndex.jsp</result>
+			<result name="pushPre">/weibo/weiboSend.jsp</result>
+			<result name="sentPre">/weibo/weiboSentIndex.jsp</result>
+			<result name="sentPreTime">/weibo/weiboSentTimeIndex.jsp</result>
+			<result name="dataList" type="json">
+    			<param name="root">queryJson</param>
+    		</result>
+		</action>
+		
+		<action name="*FileUploadAction"  class="fileUploadAction"  method="{1}">
+		</action>
+	</package>
+</struts>

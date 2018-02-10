@@ -1,0 +1,54 @@
+/*禁词管理*/
+.vspace_23{	height:23px;	font-size:0px;	line-height:0px;	width:99%;	clear:both;}
+.yqyhgl{ width:594px; margin:0 auto;}
+.yqyhgl .chaxun{width:594px; margin-top:43px;}
+.yqyhgl .chaxun dl dd{ height:28px;}
+.yqyhgl .chaxun dl dd span{ width:65px; display:inline-block;}
+.yqyhgl .chaxun dl dd .select1{ width:76px; }
+.yqyhgl .chaxun dl dd .select2{ width:118px;}
+.yqyhgl .chaxun dl dd .select3{ width:85px;}
+.yqyhgl .chaxun dl dd .text{width:317px; }
+.yqyhgl .chaxun dl dd .submit{ width:86px; height:28px; background:url(img/chaxunbg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; border:none; cursor:pointer;}
+.yqyhgl .list{ width:592px;}
+.yqyhgl .list table{ width:592px; border-top:1px solid #d4d4d4;border-left:1px solid #d4d4d4;}
+.yqyhgl .list table tr{width:592px;}
+.yqyhgl .list table tr td em{ float:left; padding-left:15px; width:200px;}
+.yqyhgl .list table tr td b{ width:150px; float:right; font-weight:normal; padding-right:30px;}
+.yqyhgl .list table tr th{ height:40px; text-align:center; font-size:18px; font-weight:normal; border-bottom:2px solid #b3b3b3;border-right:1px solid #d4d4d4;}
+.yqyhgl .list table .button1{ width:92px; height:28px;background:url(img/jinci1bg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; margin-left:16px; margin-top:4px; border:none; float:left; cursor:pointer;}
+.yqyhgl .list table span{ float:left; margin-left:134px; margin-top:12px;}
+.yqyhgl .list table tr.gruy{ background:#f2f2f2;}
+.yqyhgl .list table tr td{ height:24px; text-align:center;border-bottom:1px solid #d4d4d4; border-right:1px solid #d4d4d4;}
+.yqyhgl .list table tr td.num_3 a.red{ color:red;} 
+.yqyhgl .list table tr td.num_4 a{ color:#002366; text-decoration:underline;}
+
+
+#ychakan{ background:#f9f9f9;}
+.ychakan h1{ text-align:center; font-size:12px; font-weight:normal; padding-top:15px; height:45px;}
+.ychakan{ width:430px; margin:0 auto;}
+.ychakan dl dt{ height:30px;}
+.ychakan dl dd{ margin-top:12px;}
+.ychakan dl dd span{ width:75px; padding-right:15px; display:inline-block;} 
+.ychakan dl dd span b{ color:#ff0000; float:right; font-weight:normal;}
+.ychakan dl dd span em{ float:right;}
+.ychakan dl dd input.text{ width:240px; height:20px; background:#fff; border:1px solid #e4e4e4;}
+.ychakan dl dd input.button1{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:160px; margin-top:75px;}
+
+
+
+
+
+#yabout{ background:#f9f9f9;}
+.yabout{ width:435px; margin:0 auto;}
+.yabout dl{ margin-top:15px;}
+.yabout dl dt{ height:40px; text-align:center; font-size:14px;} 
+.yabout dd textarea{ width:428px; height:158px; border:1px solid #ececec; margin-top:20px;}
+.yabout dd { text-align:center;}
+.yabout dd input{width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:20px; margin-top:27px;}
+
+
+
+
+
+
+

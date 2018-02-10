@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ctvit.weibo.task.dao.TaskMapper" >
+  <resultMap id="BaseResultMap" type="com.ctvit.weibo.task.entity.Task" >
+    <result column="task_id" property="taskId" jdbcType="VARCHAR" />
+    <result column="weibo_id" property="weiboId" jdbcType="VARCHAR" />
+    <result column="task_type" property="taskType" jdbcType="INTEGER" />
+    <result column="task_create_time" property="taskCreateTime" jdbcType="TIMESTAMP" />
+    <result column="task_begin_time" property="taskBeginTime" jdbcType="TIMESTAMP" />
+    <result column="task_end_time" property="taskEndTime" jdbcType="TIMESTAMP" />
+    <result column="task_forever" property="taskForever" jdbcType="INTEGER" />
+    <result column="task_frequency" property="taskFrequency" jdbcType="VARCHAR" />
+    <result column="task_state" property="taskState" jdbcType="INTEGER" />
+    <result column="task_config_xml" property="taskConfigXml" jdbcType="VARCHAR" />
+    <result column="task_level" property="taskLevel" jdbcType="INTEGER" />
+    <result column="task_detail_time" property="taskDetailTime" jdbcType="INTEGER" />
+    <result column="task_every_sort" property="taskEverySort" jdbcType="INTEGER" />
+    <result column="task_frequency_sort" property="taskFrequencySort" jdbcType="INTEGER" />
+    
+    <result column="app_key" jdbcType="VARCHAR" property="appKey" />
+    <result column="app_secret" jdbcType="VARCHAR" property="appSecret" />
+    <result column="app_redirect_uri" jdbcType="VARCHAR" property="appRedirectUri" />
+    
+    <result column="weibo_uid" jdbcType="VARCHAR" property="weiboUid" />
+    <result column="weibo_user_name" jdbcType="VARCHAR" property="weiboUserName" />
+    <result column="weibo_password" jdbcType="VARCHAR" property="weiboPassword" />
+    <result column="weibo_token" jdbcType="VARCHAR" property="weiboToken" />
+    <result column="app_level" jdbcType="VARCHAR" property="appLevel" />
+  </resultMap>
+  
+  <select id="selectByTaskId" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	select * from task a,weibo b,app c where a.weibo_id = b.weibo_id and b.app_id = c.app_id and a.task_id = #{taskId,jdbcType=VARCHAR}
+  </select>
+  <update id="updateByTaskId" parameterType="com.ctvit.weibo.task.entity.Task">
+  	update task
+  	<set>
+  		<if test="taskBeginTime !=null">
+  			task_begin_time = #{taskBeginTime,jdbcType=TIMESTAMP},
+  		</if>
+  		<if test="taskEndTime !=null">
+  			task_end_time = #{taskEndTime,jdbcType=TIMESTAMP},
+  		</if>
+  		<if test="taskForever !=null">
+  			task_forever = #{taskForever,jdbcType=INTEGER},
+  		</if>
+  		<if test="taskFrequency !=null">
+  			task_frequency = #{taskFrequency,jdbcType=VARCHAR},
+  		</if>
+  		<if test="taskState !=null">
+  			task_state = #{taskState,jdbcType=INTEGER},
+  		</if>
+  		<if test="taskConfigXml !=null">
+  			task_config_xml = #{taskConfigXml,jdbcType=VARCHAR},
+  		</if>
+  		<if test="taskDetailTime !=null">
+  			task_detail_time = #{taskDetailTime,jdbcType=VARCHAR},
+  		</if>
+  		<if test="taskEverySort !=null">
+  			task_every_sort = #{taskEverySort,jdbcType=VARCHAR},
+  		</if>
+  		<if test="taskFrequencySort !=null">
+  			task_frequency_sort = #{taskFrequencySort,jdbcType=VARCHAR},
+  		</if>
+  	</set>
+  	where task_id = #{taskId,jdbcType=VARCHAR}
+  </update>
+ 	
+ 	<insert id="insert" parameterType="com.ctvit.weibo.task.entity.Task">
+ 		INSERT INTO task(task_id,weibo_id,task_type,task_create_time,task_state,task_level,
+ 				task_begin_time,task_end_time,task_forever,task_frequency,
+ 				task_config_xml,task_detail_time,task_every_sort,task_frequency_sort
+ 			) 
+ 			values(#{taskId,jdbcType=VARCHAR},#{weiboId,jdbcType=VARCHAR},#{taskType,jdbcType=INTEGER},
+ 			sysdate(),#{taskState,jdbcType=INTEGER},#{taskLevel,jdbcType=INTEGER},#{taskBeginTime,jdbcType=TIMESTAMP},
+ 			#{taskEndTime,jdbcType=TIMESTAMP},#{taskForever,jdbcType=INTEGER},#{taskFrequency,jdbcType=VARCHAR},
+ 			#{taskConfigXml,jdbcType=VARCHAR},#{taskDetailTime,jdbcType=VARCHAR},#{taskEverySort,jdbcType=VARCHAR},#{taskFrequencySort,jdbcType=VARCHAR}
+ 		)
+ 	</insert>
+ 	
+ 	<select id="selectByCondition" resultMap="BaseResultMap" parameterType="com.ctvit.weibo.task.entity.Task">
+ 		SELECT * FROM TASK WHERE 1=1
+		<if test="weiboId != null">
+			AND WEIBO_ID = #{weiboId,jdbcType=VARCHAR}
+		</if>
+		<if test="taskLevel != null">
+			AND TASK_LEVEL = #{taskLevel,jdbcType=INTEGER}
+		</if>
+		<if test="taskState !=null">
+			AND TASK_STATE = #{taskState,jdbcType=INTEGER}
+		</if>
+		ORDER BY task_create_time DESC
+ 		<if test="beginIndex != null" >
+	  		limit #{beginIndex,jdbcType=DECIMAL},#{rows,jdbcType=DECIMAL}
+	  	</if>
+ 	</select>
+ 	<select id="selectBasic" resultMap="BaseResultMap" parameterType="com.ctvit.weibo.task.entity.Task">
+ 		SELECT T.*,A.APP_LEVEL FROM TASK T, WEIBO W, APP A WHERE 1=1
+ 		AND T.WEIBO_ID = W.WEIBO_ID AND W.APP_ID = A.APP_ID
+		<if test="weiboId != null">
+			AND T.WEIBO_ID = #{weiboId,jdbcType=VARCHAR}
+		</if>
+		<if test="taskLevel != null">
+			AND T.TASK_LEVEL = #{taskLevel,jdbcType=INTEGER}
+		</if>
+ 		<if test="beginIndex != null" >
+	  		limit #{beginIndex,jdbcType=DECIMAL},#{rows,jdbcType=DECIMAL}
+	  	</if>
+ 	</select>
+ 	<select id="selectCount" resultType="Integer" parameterType="com.ctvit.weibo.task.entity.Task">
+ 		SELECT count(*) FROM TASK WHERE 1=1
+		<if test="weiboId != null">
+			AND WEIBO_ID = #{weiboId,jdbcType=VARCHAR}
+		</if>
+		<if test="taskLevel != null">
+			AND TASK_LEVEL = #{taskLevel,jdbcType=INTEGER}
+		</if>
+ 	</select>
+ 	
+ 	<select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  		select * from task where task_id = #{taskId,jdbcType=VARCHAR}
+  </select>
+</mapper>

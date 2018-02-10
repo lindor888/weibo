@@ -1,0 +1,31 @@
+/*管理中心登录*/
+.glzxdl{ width:593px; height:396px; margin:55px auto 0px; background:url(img/loginbg.jpg) no-repeat 0 0;}
+.glzxdl dl dt{ float:left; padding-left:35px; width:558px; height:99px;}
+.glzxdl dl dt span{ font-size:32px; font-family:"微软雅黑"; color:#c1272d;}
+.glzxdl dl dt em{ font-size:16px; font-family:"微软雅黑"; color:#c1272d;}
+.glzxdl dl dd{ float:left; width:593px;}
+.glzxdl dl dd span{ float:left; padding-left:195px; text-align:right; width:48px; height:35px; line-height:35px;}
+.glzxdl dl dd input.text1,.glzxdl dl dd input.text2{ width:182px; height:33px;  line-height:35px; float:left; margin-left:5px; border:none; background:#fff;}
+.glzxdl dl dd.dd2{ margin-top:14px;}
+.glzxdl dl dd.dd3{ margin-top:7px;}
+.glzxdl dl dd input.text3{ float:left; height:30px; width:80px; border:none; background:#fff; margin-top:7px;}
+.glzxdl dl dd.dd3 img{ cursor:pointer; float:left; margin-left:14px;}
+.glzxdl dl dd.dd3 span{ margin-top:5px;}
+.glzxdl dl dd.dd3 em{ margin-top:30px; float:left; margin-left:5px; font-size:12px; color:#002366;}
+.glzxdl dl dd.dd3 em a{ font-size:12px; color:#002366; text-decoration:underline;}
+.glzxdl dl dd.dd4 .submit{ width:85px; height:27px; line-height:27px; border:none; color:#fff; font-family:"微软雅黑"; font-size:14px;background:url(img/login.jpg) no-repeat 0 0; float:left; cursor:pointer; margin-left:190px; margin-top:27px;}
+.glzxdl dl dd.dd4 .buuton{ width:85px; height:27px; line-height:27px; border:none; color:#fff; font-family:"微软雅黑"; font-size:14px;background:url(img/login.jpg) no-repeat 0 0; float:left; cursor:pointer; margin-left:50px; margin-top:27px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+/*修改密码*/
+#tjdyyh{ background:#f9f9f9;}
+.tjdyyh{ width:430px; margin:30px auto 0px;}
+.tjdyyh dl dd{ margin-top:12px;}
+.tjdyyh dl dd span{ width:110px; padding-right:15px; display:inline-block;} 
+.tjdyyh dl dd span b{ color:#ff0000; float:right; font-weight:normal;}
+.tjdyyh dl dd span em{ float:right;}
+.tjdyyh dl dd input.text{ width:200px; height:20px; background:#fff; border:1px solid #e4e4e4;}
+.tjdyyh dl dd input.button1{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:10px;}
+.tjdyyh dl dd input.button2{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:20px;}
+.tjdyyh dl dd input.submit{ width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:110px;}

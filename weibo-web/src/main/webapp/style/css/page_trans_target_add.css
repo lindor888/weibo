@@ -1,0 +1,448 @@
+.target-url {
+	overflow: hidden;
+}
+
+input#PathName {
+	width: 300px;
+	margin-left: 41px;
+}
+
+ul#Path1,ul#Path2 {
+	list-style: none;
+	position: relative;
+	margin-top: 20px;
+}
+
+ul#Path1 {
+	margin-top: 30px;
+}
+
+ul#Path1 p.label,ul#Path2 p.label {
+	position: absolute;
+	top: 4px;
+	left: 0;
+}
+
+ul#Path1 li,ul#Path2 li {
+	margin-bottom: 10px;
+	padding-left: 125px;
+}
+
+ul#Path1 input,ul#Path2 input {
+	width: 300px;
+}
+
+input#TransName {
+	width: 130px;
+	margin-bottom: 5px;
+}
+
+#TransNameWrap {
+	margin-bottom: 10px;
+}
+
+#Path {
+	margin: 20px 0;
+	position: relative;
+}
+
+#Path span {
+	position: absolute;
+	color: #666;
+	padding-left: 20px;
+	width: 240px;
+}
+
+#Head {
+	background: #EFEFEF;
+	padding: 10px 0 0 57px;
+}
+
+#Head span#Name {
+	margin-right: 130px;
+}
+
+#Head span#Url {
+	margin-right: 127px;
+}
+
+.Steps input {
+	width: 150px;
+}
+
+.Steps div label {
+	margin-right: 5px;
+}
+
+.Steps a {
+	margin-left: 8px;
+}
+
+#Add {
+	background: #EFEFEF;
+	padding: 0 0 5px 20px;
+}
+
+.add_step {
+	padding: 0 0 15px 0;
+}
+
+#Target {
+	background: #EFEFEF;
+	padding: 5px 0 5px 20px;
+}
+
+#Target input {
+	width: 150px;
+}
+
+#Target label {
+	margin-right: 12px;
+}
+
+#Income {
+	padding: 10px 0 4px 26px;
+}
+
+#Income input {
+	width: 55px;
+	margin-left: 9px;
+}
+
+#Income span {
+	margin-left: 6px;
+}
+
+#Cent {
+	padding: 5px 0 0 0;
+}
+
+#Cent input {
+	width: 55px;
+	margin-left: 45px;
+}
+
+#Cent span {
+	margin-left: 8px;
+}
+
+.setting-main .m-way {
+	position: relative;
+	top: -1px;
+	*top: 0;
+	border: 0;
+}
+
+.TransPage {
+	width: 230px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+#OnlyCrossPath {
+	padding: 10px 0 5px 26px;
+}
+
+#Left #OnlyCrossPath input {
+	border: 0;
+}
+
+.first-fourth-title {
+	color: #666;
+	margin: 15px 0 5px 0;
+}
+
+#FirstRight {
+	margin-top: 90px;
+}
+
+.path-title {
+	padding: 5px 0;
+}
+
+.path-title input {
+	margin: 0 10px 0 0;
+	width: 153px;
+}
+
+.setting-main input {
+	border: 1px solid #abadb3;
+	height: 22px;
+	line-height: 22px;
+	outline: none;
+	padding-left: 3px;
+}
+
+.setting-main .cross-path-input,#TransType input {
+	border: 0;
+	width: auto;
+}
+
+.Steps input.step-name {
+	width: 114px;
+}
+
+.Steps input.step-url {
+	width: 200px;
+}
+
+.second-step {
+	margin-bottom: 5px;
+	margin-top: 30px;
+	border-top: 1px dashed #CCC;
+	padding-top: 15px;
+}
+
+input.err {
+	background-color: #FADEDE;
+	border: 1px solid #F00;
+}
+
+div.err-msg {
+	color: #F00;
+}
+
+a.hand:hover {
+	text-decoration: none;
+}
+
+.first-step em,.second-step em {
+	font-style: italic;
+	font-weight: normal;
+}
+
+.step-url {
+	margin: 0 0 0 10px;
+}
+
+.second-step input,.second-step .path_add_page,.path-title,.first-step input
+	{
+	height: 22px;
+	line-height: 22px;
+}
+
+.first-fourth-step input {
+	margin: 0 10px;
+}
+
+#add_path {
+	margin: 10px 0 20px 0;
+}
+
+#add_path button {
+	*margin: 0;
+	*line-height: 22px;
+	*height: 22px;
+}
+
+.name-input {
+	margin: 0 5px 0 0;
+}
+
+.first-third-step {
+	margin: 10px 0;
+}
+
+.step-label {
+	height: 24px;
+	line-height: 24px;
+	width: 50px;
+	background-color: #f1f1f1;
+	color: #666;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.target-add-page {
+	margin-bottom: 10px;
+}
+
+.first-second-step p {
+	height: 22px;
+	line-height: 22px;
+}
+
+.new-trans-page {
+	*margin-left: 5px;
+}
+
+.err-msg {
+	height: 16px;
+	line-height: 16px;
+}
+
+.Steps_title {
+	height: 10px;
+}
+
+.add_step a {
+	padding-top: 5px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.step {
+	margin-bottom: 10px;
+	*zoom: 1;
+	*margin-top: 5px;
+}
+
+.added-step p {
+	line-height: 22px;
+}
+
+.added-step {
+	margin: 6px 0;
+	*margin-bottom: 5px;
+	*width: 465px;
+}
+
+.setting-main {
+	border: 1px solid #ddd;
+	color: #666;
+}
+
+.page-trans-setting-title {
+	padding-left: 15px;
+	height: 49px;
+	border-bottom: 1px solid #ddd;
+	background-color: #f1f1f1;
+	color: #666;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 49px;
+}
+
+.page-trans-setting-content {
+	margin: 20px 15px;
+}
+
+.setting-note {
+	padding: 10px 6px;
+}
+
+.page-trans-setting-submit {
+	height: 22px;
+	border-top: 1px solid #ddd;
+	padding: 9px 0 9px 25px;
+	background-color: #f1f1f1;
+}
+
+.page-trans-setting-submit a {
+	margin-right: 10px;
+}
+
+.page-trans-row {
+	padding-left: 10px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #e7e7e7;
+	background-color: #f7f7f7;
+	margin: 8px 0;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+.page-trans-record-type {
+	margin: 8px 0;
+	padding-left: 10px;
+}
+
+.page-trans-record-type-title {
+	border: 1px solid #fff;
+	cursor: pointer;
+	padding: 0 0 0 6px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+	width: 110px;
+	height: 24px;
+	line-height: 24px;
+}
+
+.page-trans-record-type-title:hover {
+	border: 1px solid #cacaca;
+}
+
+.page-trans-record-type .open {
+	border: 1px solid #cacaca;
+}
+
+.page-trans-record-type-detail {
+	border: 1px solid #999;
+	padding: 8px 15px 8px 8px;
+	width: 180px;
+	background-color: #fff;
+	_position: relative;
+}
+
+#add_order_number {
+	margin-left: 40px;
+}
+
+.income-desc {
+	color: #999;
+	margin-bottom: 15px;
+}
+
+.page-trans-row-detail {
+	padding-left: 10px;
+	margin-top: 15px;
+}
+
+.page-trans-time {
+	padding-left: 10px;
+	margin: 8px 0 15px;
+}
+
+#PageTransTime {
+	width: 45px;
+	margin: 0 5px;
+}
+
+.page-trans-path-detail {
+	padding-left: 25px;
+}
+
+.page-trans-type-detail {
+	padding-left: 5px;
+}
+
+label .cross-path-input {
+	width: auto;
+	margin: 0 5px 0 15px;
+}
+
+#TransType label {
+	margin-left: 20px;
+}
+
+.trans-type-other-text {
+	width: 100px;
+	border: 1px solid #b0b0b0;
+	margin-left: 8px;
+}
+
+.path-title .default-path-name {
+	*margin-left: -15px;
+}
+
+.page-trans-target {
+	position: relative;
+}
+
+.page-trans-setting-tip {
+	position: absolute;
+	top: 40px;
+	left: 80px;
+}
+
+.setting-note .note-arrow {
+	_left: -14px;
+}

@@ -1,0 +1,76 @@
+.ipduanguanli{ width:605px; margin:0 auto;}
+.ipduanguanli dl{ margin-top:43px;}
+.ipduanguanli dl dt{ text-align:center; padding-top:11px; padding-bottom:18px; font-size:14px; font-weight:normal;}
+.ipduanguanli dl dd{ height:28px;}
+.ipduanguanli dl dd span{ width:75px; display:inline-block; text-align:right; padding-right:15px;}
+.ipduanguanli dl dd em{ padding-left:80px;}
+.ipduanguanli dl dd .select1{ width:76px; border:1px solid #e6e6e6;}
+.ipduanguanli dl dd .select2{ width:118px; border:1px solid #e6e6e6;}
+.ipduanguanli dl dd .select3{ width:85px; border:1px solid #e6e6e6;}
+.ipduanguanli dl dd .text{width:317px; border:1px solid #e6e6e6;}
+.ipduanguanli dl dd .text1{ width:66px; border:1px solid #e6e6e6;}
+.ipduanguanli dl dd .submit{ width:86px; height:28px; background:url(img/chaxunbg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; border:none; cursor:pointer;}
+.ipduanguanli table{ width:594px; border-top:1px solid #d4d4d4;border-left:1px solid #d4d4d4; margin-top:6px;}
+.ipduanguanli table tr{width:594px;}
+.ipduanguanli table tr td em{ float:left; padding-left:0px; width:200px;}
+.ipduanguanli table tr td b{ width:150px; float:right; font-weight:normal; padding-right:30px;}
+.ipduanguanli table tr th{ height:40px;  font-size:18px; border-bottom:2px solid #b3b3b3;border-right:1px solid #d4d4d4; font-weight:normal;   line-height:40px;}
+.ipduanguanli table tr th span{ float:left; padding-left:150px;}
+.ipduanguanli table .button1{ width:92px; height:28px;background:url(img/jinci1bg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; margin-left:16px; margin-top:4px; border:none; float:left; cursor:pointer;}
+.ipduanguanli table tr.gruy{ background:#f2f2f2;}
+.ipduanguanli table tr td{ height:24px; text-align:center;border-bottom:1px solid #d4d4d4; border-right:1px solid #d4d4d4;}
+.ipduanguanli table tr td.num_5 a{ color:#002366; text-decoration:underline;}
+
+
+
+#tjxdipd{ background:#f9f9f9;}
+.tjxdipd{ width:250px; margin:0 auto;}
+.tjxdipd dl dt{ text-align:center; font-size:14px; margin-top:20px;}
+.tjxdipd dl dd span{ width:45px; display:inline-block;margin-top:48px;}
+.tjxdipd dl dd input.text{ width:200px; height:20px; background:#fff; border:1px solid #e4e4e4;margin-top:48px;}
+.tjxdipd dl dd input.button{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:20px; margin-top:35px;}
+.tjxdipd dl dd input.submit{ width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer;margin-left:20px; margin-top:35px;}
+
+
+/*日志管理*/
+.logguanli{ width:605px; margin:0 auto;}
+.logguanli dl{ margin-top:43px;}
+.logguanli dl dt{ text-align:center; padding-top:11px; padding-bottom:18px; font-size:14px; font-weight:normal;}
+.logguanli dl dd{ height:28px;}
+.logguanli dl dd span{ width:20px; display:inline-block; text-align:left; padding-right:5px;}
+.logguanli dl dd em{ padding-left:80px;}
+.logguanli dl dd .select1{ width:76px; border:1px solid #e6e6e6;}
+.logguanli dl dd .select2{ width:118px; border:1px solid #e6e6e6;}
+.logguanli dl dd .select3{ width:85px; border:1px solid #e6e6e6;}
+.logguanli dl dd .text{width:317px; border:1px solid #e6e6e6;}
+.logguanli dl dd .text1{ width:66px; border:1px solid #e6e6e6;}
+.logguanli dl dd .textlog{ width:110px; border:1px solid #e6e6e6;}
+.logguanli dl dd .submit{ width:86px; height:28px; background:url(img/chaxunbg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; border:none; cursor:pointer;}
+.logguanli table{ width:594px; border-top:1px solid #d4d4d4;border-left:1px solid #d4d4d4; margin-top:6px;}
+.logguanli table tr{width:594px;}
+.logguanli table tr td em{ float:left; padding-left:0px; width:200px;}
+.logguanli table tr td b{ width:150px; float:right; font-weight:normal; padding-right:30px;}
+.logguanli table tr th{ height:40px;  font-size:18px; border-bottom:2px solid #b3b3b3;border-right:1px solid #d4d4d4; font-weight:normal;   line-height:40px;}
+.logguanli table tr th span{ float:left; padding-left:150px;}
+.logguanli table .button1{ width:92px; height:28px;background:url(img/jinci1bg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; margin-left:16px; margin-top:4px; border:none; float:left; cursor:pointer;}
+.logguanli table tr.gruy{ background:#f2f2f2;}
+.logguanli table tr td{ height:24px; text-align:center;border-bottom:1px solid #d4d4d4; border-right:1px solid #d4d4d4;}
+.logguanli table tr td.num_5 a{ color:#002366; text-decoration:underline;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

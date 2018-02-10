@@ -1,0 +1,49 @@
+.big-banner {
+	width: 814px;
+	height: 185px;
+	background: url("decorator/time_trans_target_big_banner.png") 0 0
+		no-repeat;
+	margin-bottom: 15px;
+	text-indent: -999em;
+}
+
+.time-setting-content,.depth-setting-content {
+	padding-left: 24px;
+}
+
+.time-setting-content input,.depth-setting-content input {
+	width: 40px;
+}
+
+.depth-setting {
+	padding: 20px 0;
+	margin-top: 28px;
+}
+
+#Left .time-trans-target-error-input {
+	background-color: #FADEDE;
+	border: 1px solid #F58686;
+}
+
+.time-trans-target-error-msg {
+	color: #F00;
+	font-size: 12px;
+}
+
+#Left {
+	margin-right: 18px;
+}
+
+.right-container {
+	width: 820px;
+}
+
+.time_trans_setting {
+	margin-bottom: 30px;
+}
+
+#Left strong {
+	font-weight: bold;
+	height: 16px;
+	line-height: 16px;
+}

@@ -1,0 +1,55 @@
+/*可接入的应用列表*/
+.kejierudeyingyongliebiao{ width:600px; margin:0 auto;}
+.kejierudeyingyongliebiao dl{ margin-top:43px;}
+.kejierudeyingyongliebiao dl dt{ text-align:center; padding-top:11px; padding-bottom:18px; font-size:14px; font-weight:normal;}
+.kejierudeyingyongliebiao dl dd{ height:28px; text-align:center;}
+.kejierudeyingyongliebiao dl dd span{ width:75px; display:inline-block; text-align:right; padding-right:15px;}
+.kejierudeyingyongliebiao dl dd em{ padding-left:80px;}
+.kejierudeyingyongliebiao dl dd .select1{ width:170px; border:1px solid #D4D4D4;}
+.kejierudeyingyongliebiao dl dd .submit{ width:86px; height:28px; background:url(img/chaxunbg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; border:none; cursor:pointer;}
+.kejierudeyingyongliebiao table{ width:594px; border-top:1px solid #d4d4d4;border-left:1px solid #d4d4d4; margin-top:6px;}
+.kejierudeyingyongliebiao table tr{width:594px;}
+.kejierudeyingyongliebiao table tr td em{ float:left; padding-left:0px; width:200px;}
+.kejierudeyingyongliebiao table tr td b{ width:150px; float:right; font-weight:normal; padding-right:30px;}
+.kejierudeyingyongliebiao table tr th{ height:40px;  font-size:18px; border-bottom:2px solid #b3b3b3;border-right:1px solid #d4d4d4; font-weight:normal;   line-height:40px;}
+.kejierudeyingyongliebiao table tr th span{ float:left; padding-left:150px;}
+.kejierudeyingyongliebiao table .button1{ width:92px; height:28px;background:url(img/jinci1bg.jpg) no-repeat 0 0; font-size:14px; font-family:"微软雅黑"; color:#fff; margin-left:16px; margin-top:4px; border:none; float:left; cursor:pointer;}
+.kejierudeyingyongliebiao table tr.gruy{ background:#f2f2f2;}
+.kejierudeyingyongliebiao table tr td{ height:24px; text-align:center;border-bottom:1px solid #d4d4d4; border-right:1px solid #d4d4d4;}
+.kejierudeyingyongliebiao table tr td.num_5 a{ color:#002366; text-decoration:underline;}
+
+
+
+#tjxdyy{ background:#f9f9f9;}
+.tjxdyy{ width:250px; margin:0 auto;}
+.tjxdyy dl dt{ text-align:center; font-size:14px; margin-top:20px;}
+.tjxdyy dl dd{ margin-top:12px;}
+.tjxdyy dl dd.img span{ vertical-align:45px;}
+.tjxdyy dl dd span{ width:70px; display:inline-block;} 
+.tjxdyy dl dd span b{ color:#ff0000; float:right; font-weight:normal;}
+.tjxdyy dl dd span em{ float:right;}
+.tjxdyy dl dd img{ border:1px solid #e3e3e3;}
+.tjxdyy dl dd input.button{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer; margin-left:20px; margin-top:20px;}
+.tjxdyy dl dd input.button1{  width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer;}
+.tjxdyy dl dd input.text{ width:170px; border:1px solid #e3e3e3; background:#fff;} 
+.tjxdyy dl dd input.submit{ width:86px; height:28px;background:url(img/chaxunbg.jpg) no-repeat 0 0; border:none; font-family:"微软雅黑"; color:#fff; font-size:14px; cursor:pointer;margin-left:20px; margin-top:20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

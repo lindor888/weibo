@@ -1,0 +1,36 @@
+/*登录*/
+.denglu{ width:960px; height:499px;background:url(img/bgcolor.jpg) no-repeat 0 0; margin:0 auto;}
+.denglu dl dt{ float:left; padding-left:220px; width:558px; height:103px; padding-top:50px;}
+.denglu dl dt span{ font-size:32px; font-family:"微软雅黑"; color:#fff;}
+.denglu dl dt em{ font-size:16px; font-family:"微软雅黑"; color:#fff; padding-left:15px}
+.denglu dl dd{ float:left; width:700px;}
+.denglu dl dd span{ float:left; padding-left:333px; text-align:right; width:48px; height:35px; line-height:35px;}
+.denglu dl dd p.p1{ padding-top:2px;padding-left:15px;}
+.denglu dl dd p{float:left; width:100px;}
+.denglu dl dd p a{ color:#002366; text-decoration:underline;}
+.denglu dl dd p.p4{padding-left:15px;}
+.denglu dl dd p.p2{ padding-top:7px; padding-left:15px;}
+.denglu dl dd input.text1,.denglu dl dd input.text2{ width:182px; height:33px;  line-height:35px; float:left; margin-left:5px; border:none; background:#fff;}
+.denglu dl dd.dd2{ margin-top:14px;}
+.denglu dl dd.dd3{ margin-top:7px;}
+.denglu dl dd input.text3{ float:left; height:30px; line-height:30px; padding-left:5px; width:80px; border:none; background:#fff; margin-top:7px;}
+.denglu dl dd.dd3 img{ cursor:pointer; float:left; margin-left:14px;}
+.denglu dl dd.dd3 span{ margin-top:5px;}
+.denglu dl dd.dd3 em{ margin-top:30px; float:left; margin-left:5px; font-size:12px; color:#002366;}
+.denglu dl dd.dd3 em a{ font-size:12px; color:#002366; text-decoration:underline;}
+.denglu dl dd.dd4 .submit{ width:85px; height:27px; line-height:27px; border:none; color:#fff; font-family:"微软雅黑"; font-size:14px;background:url(img/login.jpg) no-repeat 0 0; float:left; cursor:pointer; margin-left:437px; margin-top:27px;}
+.denglu dl dd.dd4 .p3{ float:left; padding-top:35px; padding-left:13px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

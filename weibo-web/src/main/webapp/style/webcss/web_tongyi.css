@@ -1,0 +1,41 @@
+/*同意*/
+.tongyi { width:752px; margin:16px auto 0px;}
+.tongyi .top{ height:48px;}
+.tongyi .top h1 span{ font-size:32px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:14px;}
+.tongyi .top h1 em{font-size:16px; color:#c1272d; font-family:"微软雅黑"; font-weight:normal; float:left; padding-left:24px; padding-top:18px;}
+.tongyi .content{ width:748px; height:500px; border:2px solid #fd6d6d; background:#f9f9f9;}
+.tongyi .liucheng{ background:url(img/liucheng.jpg) no-repeat top left; width:661px; height:61px; margin:23px auto 0px; border-bottom:1px solid #fd3e3e;}
+.tongyi .xinxi{width:661px; margin:0 auto;}
+.tongyi .xinxi h1{ font-size:14px; font-weight:normal; padding-top:8px;}
+.tongyi .xinxi dl{ padding-left:159px; width:430px;}
+.tongyi .xinxi dl dt{ text-align:center; padding-top:19px; }
+.tongyi .xinxi dl dd{ float:left;width:430px; padding-top:12px;}
+.tongyi .xinxi dl dd span{ width:90px; height:25px; padding-top:10px; text-align:right; display:inline-block; float:left;}
+.tongyi .xinxi dl dd p{ float:left; width:337px;}
+.tongyi .xinxi dl dd span em{ color:#f00; font-weight:normal;}
+.tongyi .xinxi dl dd span b{ font-weight:normal;}
+.tongyi .xinxi dl dd input{ float:left;}
+.tongyi .xinxi dl dd input.text{ width:231px; padding-left:7px; background:#fff; height:33px; line-height:33px; border:1px solid #c9c9c9;}
+.tongyi .xinxi dl dd input.text1{ width:74px; padding-left:7px; background:#fff; height:33px; line-height:33px;border:1px solid #c9c9c9}
+.tongyi .xinxi dl dd p{ color:#808080; line-height:20px;}
+.tongyi .xinxi dl dd img{ float:left; width:101px; height:48px; cursor:pointer; padding-left:12px;}
+.tongyi .xinxi dl dd a{ float:left; color:#002366; text-decoration:underline;}
+.tongyi .xinxi dl dd.yzm span,.tongyi .xinxi dl dd.yzm input{ margin-top:5px;}
+.tongyi .xinxi dl dd.yzm a{ padding-top:25px; padding-left:13px;}
+.tongyi .xinxi dl dd.xuzhi input{ margin-left:75px; margin-bottom:12px;}
+.tongyi .xinxi dl dt .submit{ background:url(img/login.jpg) no-repeat 0 0; width:85px; height:27px; font-family:"微软雅黑"; color:#fff; font-size:14px; border:none; cursor:pointer;}
+
+.tongyi .bottom{ height:20px; background:url(img/dibiao.jpg) no-repeat 0 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+

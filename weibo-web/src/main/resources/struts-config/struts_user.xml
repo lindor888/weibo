@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="user" namespace="/user" extends="weibo">
+		<!-- 账户管理 -->
+		<action name="*User" class="userAction" method="{1}">
+			<result name="login">/index.jsp</result>
+			<result name="loginPre">/login.jsp</result>
+			<result name="re_login">/login.jsp</result>
+			<result name="add">/index.jsp</result>
+			<result name="re-registration">/register.jsp</result>
+			<result name="indexPre">/user/modifyPass.jsp</result>
+			<result name="dataList" type="json">
+				<param name="root">queryJson</param>
+			</result>
+			<result name="getUser" type="json">
+				<param name="root">queryJson</param>
+			</result>
+			<result name="script" type="json">
+				<param name="root">queryJson</param>
+			</result>
+			<result name="modifyPass" type="json">
+				<param name="root">queryJson</param>
+			</result>
+			<result name="register" type="json">
+				<param name="root">queryJson</param>
+			</result>
+		</action>
+
+	</package>
+</struts>

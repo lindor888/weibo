@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<!-- mapper -->	
+	<bean id="countSearchWeiboMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.count.dao.CountSearchWeiboMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="countFollowerSexMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.count.dao.CountFollowerSexMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="countFollowerDistrictMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.count.dao.CountFollowerDistrictMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="countWeiboMapper" class="org.mybatis.spring.MapperFactoryBean">
+		<property name="mapperInterface" value="com.ctvit.weibo.count.dao.CountWeiboMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<!-- service -->
+	<bean id="countSearchWeiboService" class="com.ctvit.weibo.count.service.CountSearchWeiboService">
+		<property name="countSearchWeiboMapper" ref="countSearchWeiboMapper"></property>
+	</bean>
+	
+	<bean id="countFollowerSexService" class="com.ctvit.weibo.count.service.CountFollowerSexService">
+		<property name="countFollowerSexMapper" ref="countFollowerSexMapper"></property>
+	</bean>
+	
+	<bean id="countFollowerDistrictService" class="com.ctvit.weibo.count.service.CountFollowerDistrictService">
+		<property name="countFollowerDistrictMapper" ref="countFollowerDistrictMapper"></property>
+	</bean>
+	
+	<bean id="countWeiboService" class="com.ctvit.weibo.count.service.CountWeiboService">
+		<property name="countWeiboMapper" ref="countWeiboMapper"></property>
+	</bean>
+	
+	
+</beans>

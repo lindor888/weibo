@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="weibo-web"
+  id="myeclipse.1438240949580"
+  context-root="/weibo-studio"
+  j2ee-spec="6.0"
+  archive="weibo-web.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
